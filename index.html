@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toyin Onwunaru — Clinical Product Intelligence</title>
+<meta name="description" content="5th-year medical student building at the intersection of clinical medicine and health technology, focused on low-resource clinical contexts.">
+
+<!-- Open Graph / WhatsApp / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Toyin Onwunaru — Clinical Product Intelligence">
+<meta property="og:description" content="5th-year medical student building at the intersection of clinical medicine and health technology, focused on low-resource clinical contexts.">
+<meta property="og:image" content="https://onwunaru760-a11y.github.io/resume/assets/og-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://onwunaru760-a11y.github.io/resume/">
+<meta property="og:site_name" content="Toyin Onwunaru">
+
+<!-- Twitter Card (also used by some link-preview scrapers) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Toyin Onwunaru — Clinical Product Intelligence">
+<meta name="twitter:description" content="5th-year medical student building at the intersection of clinical medicine and health technology, focused on low-resource clinical contexts.">
+<meta name="twitter:image" content="https://onwunaru760-a11y.github.io/resume/assets/og-preview.jpg">
+
+<link rel="icon" href="data:,">
+
+<style>
+@font-face { font-family:'Plex Serif'; src:url('fonts/PlexSerif-Regular.ttf'); font-weight:400; }
+@font-face { font-family:'Plex Serif'; src:url('fonts/PlexSerif-SemiBold.ttf'); font-weight:600; }
+@font-face { font-family:'Plex Serif'; src:url('fonts/PlexSerif-Bold.ttf'); font-weight:700; }
+@font-face { font-family:'Plex Serif'; src:url('fonts/PlexSerif-Italic.ttf'); font-weight:400; font-style:italic; }
+@font-face { font-family:'Plex Sans'; src:url('fonts/PlexSans-Regular.ttf'); font-weight:400; }
+@font-face { font-family:'Plex Sans'; src:url('fonts/PlexSans-Medium.ttf'); font-weight:500; }
+@font-face { font-family:'Plex Sans'; src:url('fonts/PlexSans-SemiBold.ttf'); font-weight:600; }
+@font-face { font-family:'Plex Sans'; src:url('fonts/PlexSans-Bold.ttf'); font-weight:700; }
+@font-face { font-family:'Plex Mono'; src:url('fonts/PlexMono-Regular.ttf'); font-weight:400; }
+@font-face { font-family:'Plex Mono'; src:url('fonts/PlexMono-Medium.ttf'); font-weight:500; }
+@font-face { font-family:'Plex Mono'; src:url('fonts/PlexMono-SemiBold.ttf'); font-weight:600; }
+
+:root{
+  --ink:#16241F;
+  --ink-soft:#20342C;
+  --paper:#EFEAD8;
+  --paper-hi:#FBFAF3;
+  --amber:#A8551D;
+  --amber-hi:#C9702F;
+  --teal:#4C9484;
+  --line: rgba(239,234,216,0.16);
+  --line-strong: rgba(239,234,216,0.32);
+  --muted: #9BA79E;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--paper);
+  font-family:'Plex Sans', sans-serif;
+  font-size:16px;
+  line-height:1.6;
+}
+a{ color:var(--amber-hi); text-decoration: none; border-bottom: 1px solid rgba(201,112,47,0.35); }
+a:hover{ border-bottom-color: var(--amber-hi); }
+
+.wrap{ max-width: 880px; margin: 0 auto; padding: 0 28px; }
+
+/* ---------- ECG divider ---------- */
+.ecg{ width:100%; height:46px; display:block; margin: 6px 0 2px 0; }
+.ecg path{
+  fill:none;
+  stroke: var(--teal);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.55;
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: draw 2.2s ease-out forwards;
+}
+@keyframes draw{ to{ stroke-dashoffset:0; } }
+@media (prefers-reduced-motion: reduce){
+  .ecg path{ animation:none; stroke-dashoffset:0; }
+}
+
+/* ---------- Masthead ---------- */
+header.masthead{
+  padding: 64px 0 28px 0;
+  display:flex;
+  gap: 36px;
+  align-items:center;
+  border-bottom: 1px solid var(--line-strong);
+}
+.photo-frame{
+  flex: 0 0 auto;
+  width: 132px; height:132px; border-radius:50%;
+  border: 3px solid var(--amber);
+  padding: 4px;
+}
+.photo-frame img{ width:100%; height:100%; object-fit:cover; border-radius:50%; display:block; }
+h1{
+  font-family:'Plex Serif', serif;
+  font-weight:700;
+  font-size: clamp(2.1rem, 5vw, 3rem);
+  margin: 0 0 8px 0;
+  letter-spacing:-0.01em;
+  color: var(--paper-hi);
+}
+.headline{
+  font-family:'Plex Mono', monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--amber-hi);
+  font-weight:500;
+}
+
+/* ---------- Vitals strip ---------- */
+.vitals{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--line-strong);
+  padding: 18px 0;
+}
+.vital{ padding: 0 16px; border-left:1px solid var(--line); }
+.vital:first-child{ border-left:none; padding-left:0; }
+.vital .label{
+  display:block;
+  font-family:'Plex Mono', monospace;
+  font-size:0.66rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color: var(--teal);
+  margin-bottom: 4px;
+}
+.vital .value{ font-size: 0.88rem; color: var(--paper-hi); font-weight:500; }
+
+/* ---------- Sections ---------- */
+section{ padding: 46px 0; }
+h2{
+  font-family:'Plex Mono', monospace;
+  font-size: 0.82rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color: var(--paper-hi);
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  margin: 0 0 20px 0;
+}
+h2 .tag{ color:var(--muted); font-weight:400; letter-spacing:0.05em; font-size:0.78rem; text-transform:none; }
+h2::before{
+  content:"";
+  width: 22px; height: 1px;
+  background: var(--amber);
+  display:inline-block;
+}
+
+p.lede{ font-size:1.05rem; color: var(--paper-hi); max-width: 62ch; }
+p.lede em{ font-style:italic; color:var(--teal); }
+
+.case{
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 22px 24px;
+  margin-bottom: 16px;
+  background: var(--ink-soft);
+}
+.case:last-child{ margin-bottom:0; }
+.case-head{
+  display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap;
+}
+.case-title{ font-family:'Plex Serif', serif; font-weight:600; font-size:1.18rem; color:var(--paper-hi); }
+.case-stack{ font-family:'Plex Mono', monospace; font-size:0.72rem; color: var(--amber-hi); white-space:nowrap; }
+.case dl{ margin: 12px 0 0 0; }
+.case dt{
+  font-family:'Plex Mono', monospace;
+  font-size:0.68rem;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--teal);
+  margin-top:10px;
+}
+.case dt:first-of-type{ margin-top:0; }
+.case dd{ margin:3px 0 0 0; font-size:0.94rem; color: var(--paper); }
+.case .links{ margin-top:14px; font-family:'Plex Mono', monospace; font-size:0.82rem; }
+
+.entry{ margin-bottom:18px; }
+.entry:last-child{ margin-bottom:0; }
+.entry-title{ font-weight:600; color:var(--paper-hi); font-size:1.02rem; }
+.entry-meta{ font-family:'Plex Mono', monospace; font-size:0.74rem; color:var(--amber-hi); }
+.entry-sub{ font-size:0.88rem; color:var(--muted); font-style:italic; margin-top:2px; }
+.entry p{ margin: 6px 0 0 0; font-size:0.93rem; }
+
+.skills{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.skills .col .cat{
+  display:block;
+  font-family:'Plex Mono', monospace;
+  font-size:0.68rem;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--teal);
+  margin-bottom:6px;
+}
+.skills .col p{ margin:0; font-size:0.92rem; }
+
+/* ---------- Referral / CTA ---------- */
+.referral{
+  text-align:center;
+  padding: 56px 0 70px 0;
+}
+.referral p.lede{ margin: 0 auto 26px auto; text-align:center; }
+.cta-row{
+  display:flex; gap:14px; justify-content:center; flex-wrap:wrap;
+}
+.btn{
+  font-family:'Plex Mono', monospace;
+  font-size:0.82rem;
+  letter-spacing:0.03em;
+  padding: 13px 22px;
+  border-radius: 3px;
+  border-bottom:none;
+  display:inline-block;
+}
+.btn.primary{ background: var(--amber); color: var(--paper-hi); }
+.btn.primary:hover{ background: var(--amber-hi); }
+.btn.ghost{ border:1px solid var(--line-strong); color: var(--paper); }
+.btn.ghost:hover{ border-color: var(--teal); color: var(--teal); }
+
+footer{
+  border-top:1px solid var(--line);
+  padding: 22px 0 50px 0;
+  font-family:'Plex Mono', monospace;
+  font-size:0.72rem;
+  color: var(--muted);
+  text-align:center;
+}
+
+@media (max-width: 620px){
+  header.masthead{ flex-direction:column; text-align:center; padding-top:44px; }
+  .vitals{ grid-template-columns: repeat(2, 1fr); row-gap:16px; }
+  .vital:nth-child(3){ border-left:none; padding-left:0; }
+  .skills{ grid-template-columns: 1fr; }
+  .case-head{ flex-direction:column; align-items:flex-start; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="photo-frame"><img src="assets/headshot.jpg" alt="Toyin Onwunaru"></div>
+    <div>
+      <h1>Toyin Onwunaru</h1>
+      <div class="headline">Clinical Product Intelligence — Health Tech for Low-Resource Settings</div>
+    </div>
+  </header>
+
+  <div class="vitals">
+    <div class="vital"><span class="label">Status</span><span class="value">5th-Yr MBBS Student</span></div>
+    <div class="vital"><span class="label">Program</span><span class="value">Univ. of Port Harcourt</span></div>
+    <div class="vital"><span class="label">Grad</span><span class="value">Expected 2027</span></div>
+    <div class="vital"><span class="label">Based</span><span class="value">Port Harcourt, NG</span></div>
+  </div>
+
+  <svg class="ecg" viewBox="0 0 880 46" preserveAspectRatio="none">
+    <path d="M0,23 L200,23 L215,10 L230,40 L245,23 L440,23 L455,10 L470,40 L485,23 L680,23 L695,10 L710,40 L725,23 L880,23" />
+  </svg>
+
+  <section id="assessment">
+    <h2>Assessment</h2>
+    <p class="lede">A medical student building at the intersection of clinical medicine and health technology &mdash; focused on <em>low-resource and non-Western clinical contexts</em> specifically. The work below follows one thread: health-tech tools trained on Western data quietly fail atypical presentations and local disease-prevalence patterns. I diagnose that failure in shipped products, and I build the fix myself.</p>
+  </section>
+
+  <svg class="ecg" viewBox="0 0 880 46" preserveAspectRatio="none"><path d="M0,23 L200,23 L215,10 L230,40 L245,23 L440,23 L455,10 L470,40 L485,23 L680,23 L695,10 L710,40 L725,23 L880,23" /></svg>
+
+  <section id="findings">
+    <h2>Findings <span class="tag">— Projects</span></h2>
+
+    <div class="case">
+      <div class="case-head">
+        <span class="case-title">NaijaTriageAI</span>
+        <span class="case-stack">Flask · Supabase · Offline-First PWA</span>
+      </div>
+      <dl>
+        <dt>Chief complaint</dt>
+        <dd>Triage tools built on Western epidemiological priors underperform in low-connectivity, high-acuity Nigerian settings.</dd>
+        <dt>Workup</dt>
+        <dd>Built an installable, offline-first PWA covering chest pain and maternal/neonatal emergencies (PPH, neonatal asphyxia), with Bayesian probability models calibrated to Nigerian disease-prevalence data.</dd>
+        <dt>Finding</dt>
+        <dd>A triage tool that works without signal, and reasons with the right priors for the population it's actually deployed in.</dd>
+      </dl>
+      <div class="links"><a href="https://github.com/onwunaru760-a11y/triageAI" target="_blank" rel="noopener">github.com/onwunaru760-a11y/triageAI →</a></div>
+    </div>
+
+    <div class="case">
+      <div class="case-head">
+        <span class="case-title">Sickle Cell Disease NLP Phenotyping Pipeline</span>
+        <span class="case-stack">Bio+ClinicalBERT · UMAP · HDBSCAN</span>
+      </div>
+      <dl>
+        <dt>Chief complaint</dt>
+        <dd>SCD phenotype data sits locked in unstructured clinical notes, unusable at scale for research or care design.</dd>
+        <dt>Workup</dt>
+        <dd>Built an NLP pipeline over the PMC-Patients corpus using Bio+ClinicalBERT embeddings, UMAP dimensionality reduction and HDBSCAN clustering, with GradientBoostingClassifier for downstream classification.</dd>
+        <dt>Finding</dt>
+        <dd>Structured, clustered SCD phenotypes extracted directly from free-text clinical narrative.</dd>
+      </dl>
+      <div class="links"><a href="https://github.com/onwunaru760-a11y/scd-phenotype-clustering-nlp" target="_blank" rel="noopener">github.com/onwunaru760-a11y/scd-phenotype-clustering-nlp →</a></div>
+    </div>
+
+    <div class="case">
+      <div class="case-head">
+        <span class="case-title">Health-Tech Product Teardowns — Ada Health</span>
+        <span class="case-stack">Product Writing</span>
+      </div>
+      <dl>
+        <dt>Chief complaint</dt>
+        <dd>Does Ada Health's symptom checker actually hold up outside the population it was primarily validated on?</dd>
+        <dt>Workup</dt>
+        <dd>Three long-form pieces: a clinical product teardown, a patient-facing explainer, and B2B marketing copy — each interrogating the same product from a different reader's seat.</dd>
+        <dt>Finding</dt>
+        <dd>Ada's general-population probabilistic model underperforms on atypical presentations and non-Western disease-prevalence patterns &mdash; the same gap NaijaTriageAI was built to close.</dd>
+      </dl>
+      <div class="links"><a href="https://onwunaru760-a11y.github.io/Portfolio-Content/" target="_blank" rel="noopener">Read the full teardowns →</a></div>
+    </div>
+  </section>
+
+  <svg class="ecg" viewBox="0 0 880 46" preserveAspectRatio="none"><path d="M0,23 L200,23 L215,10 L230,40 L245,23 L440,23 L455,10 L470,40 L485,23 L680,23 L695,10 L710,40 L725,23 L880,23" /></svg>
+
+  <section id="history">
+    <h2>History <span class="tag">— Background</span></h2>
+    <div class="entry">
+      <div class="entry-title">SEO Copywriter &amp; Long-Form Content Strategist <span class="entry-meta">— Freelance</span></div>
+      <div class="entry-sub">Clients across multiple continents, prior to and alongside medical training</div>
+      <p>The writing behind every teardown above &mdash; this is the same discipline, pointed at clinical products instead of client briefs.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-title">MBBS <span class="entry-meta">— University of Port Harcourt · Expected 2027</span></div>
+      <div class="entry-sub">5th Year — Clinical postings in Obstetrics &amp; Gynaecology, Paediatrics</div>
+    </div>
+  </section>
+
+  <svg class="ecg" viewBox="0 0 880 46" preserveAspectRatio="none"><path d="M0,23 L200,23 L215,10 L230,40 L245,23 L440,23 L455,10 L470,40 L485,23 L680,23 L695,10 L710,40 L725,23 L880,23" /></svg>
+
+  <section id="procedures">
+    <h2>Procedures <span class="tag">— Skills</span></h2>
+    <div class="skills">
+      <div class="col">
+        <span class="cat">Clinical</span>
+        <p>Clinical reasoning across O&amp;G, Paediatrics &amp; Internal Medicine rotations; triage protocol design</p>
+      </div>
+      <div class="col">
+        <span class="cat">Technical</span>
+        <p>Python, SQL, Flask, Supabase, GradientBoostingClassifier, Bio+ClinicalBERT, UMAP, HDBSCAN</p>
+      </div>
+      <div class="col">
+        <span class="cat">Product &amp; Writing</span>
+        <p>Clinical product teardowns, SEO/long-form content strategy, B2B health-tech marketing copy</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="referral" id="referral">
+    <h2 style="justify-content:center;">Referral</h2>
+    <p class="lede">Open to clinical product / clinical intelligence roles at health-tech companies building for low-resource settings.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="assets/Toyin_Onwunaru_Resume.pdf" target="_blank" rel="noopener">Download Résumé (PDF)</a>
+      <a class="btn ghost" href="mailto:onwunaru760@gmail.com">Email</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/toyin-onwunaru-0a240b200" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/onwunaru760-a11y" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+  <footer>Port Harcourt, Nigeria · onwunaru760@gmail.com · +234 814 4299 760</footer>
+
+</div>
+</body>
+</html>
