@@ -1,254 +1,275 @@
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Toyin Onwunaru — Clinical AI Evaluation</title>
-<meta name="description" content="Penultimate-year medical student building and evaluating AI/ML systems for clinical care, focused on low-resource contexts.">
-<meta property="og:title" content="Toyin Onwunaru — Clinical AI Evaluation">
-<meta property="og:description" content="Penultimate-year medical student building and evaluating AI/ML systems for clinical care, focused on low-resource contexts.">
-<meta property="og:image" content="https://onwunaru760-a11y.github.io/resume/assets/og-preview.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Toyin Onwunaru">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://onwunaru760-a11y.github.io/resume/">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Toyin Onwunaru — Clinical AI Evaluation">
-<meta name="twitter:description" content="Penultimate-year medical student building and evaluating AI/ML systems for clinical care, focused on low-resource contexts.">
-<meta name="twitter:image" content="https://onwunaru760-a11y.github.io/resume/assets/og-preview.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<style>
-:root {
-  --paper: #F7F7F4;
-  --paper-raised: #FFFFFF;
-  --ink: #1B2430;
-  --ink-soft: #5B6472;
-  --rule: #DDE1E2;
-  --rule-strong: #BCC2C4;
-  --teal: #146C64;
-  --teal-soft: #E3EFED;
-  --flag: #A6402F;
-  --flag-soft: #F3E4E0;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toyin Onwunaru — Clinical AI Evaluation</title>
+  <meta name="description" content="Penultimate-year medical student building and evaluating AI/ML systems for clinical care, focused on low-resource contexts.">
+  <meta property="og:title" content="Toyin Onwunaru — Clinical AI Evaluation">
+  <meta property="og:description" content="Penultimate-year medical student building and evaluating AI/ML systems for clinical care, focused on low-resource contexts.">
+  <meta property="og:image" content="https://onwunaru760-a11y.github.io/resume/assets/og-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Toyin Onwunaru">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://onwunaru760-a11y.github.io/resume/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Toyin Onwunaru — Clinical AI Evaluation">
+  <meta name="twitter:description" content="Penultimate-year medical student building and evaluating AI/ML systems for clinical care, focused on low-resource contexts.">
+  <meta name="twitter:image" content="https://onwunaru760-a11y.github.io/resume/assets/og-preview.jpg">
 
-  --font-display: "Source Serif 4", Georgia, serif;
-  --font-body: "IBM Plex Sans", -apple-system, sans-serif;
-  --font-mono: "IBM Plex Mono", "Courier New", monospace;
-}
+  <!-- Fonts: include preconnects and proper stylesheet link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 
-* { box-sizing: border-box; }
-html { -webkit-font-smoothing: antialiased; }
+  <style>
+    :root {
+      --paper: #F7F7F4;
+      --paper-raised: #FFFFFF;
+      --ink: #1B2430;
+      --ink-soft: #5B6472;
+      --rule: #DDE1E2;
+      --rule-strong: #BCC2C4;
+      --teal: #146C64;
+      --teal-soft: #E3EFED;
+      --flag: #A6402F;
+      --flag-soft: #F3E4E0;
 
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 17px;
-  line-height: 1.6;
-}
+      --font-display: "Source Serif 4", Georgia, serif;
+      --font-body: "IBM Plex Sans", -apple-system, sans-serif;
+      --font-mono: "IBM Plex Mono", "Courier New", monospace;
+    }
 
-a { color: var(--teal); text-decoration: none; }
-a:hover { text-decoration: underline; }
-:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+    * { box-sizing: border-box; }
+    html { -webkit-font-smoothing: antialiased; }
 
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
-}
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.6;
+    }
 
-.wrap {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 56px 24px 80px;
-}
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    :focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
 
-/* ---------- header ---------- */
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
 
-.header {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  margin-bottom: 20px;
-}
+    .wrap {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
 
-.header img {
-  width: 84px;
-  height: 84px;
-  border-radius: 4px;
-  object-fit: cover;
-  border: 1px solid var(--rule);
-}
+    /* ---------- header ---------- */
 
-.header h1 {
-  font-family: var(--font-display);
-  font-size: 1.9rem;
-  font-weight: 600;
-  margin: 0 0 4px;
-  letter-spacing: -0.01em;
-}
+    .header {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
 
-.header .role {
-  font-size: 1.02rem;
-  color: var(--ink-soft);
-  max-width: 42ch;
-}
+    .header img {
+      width: 84px;
+      height: 84px;
+      border-radius: 4px;
+      object-fit: cover;
+      border: 1px solid var(--rule);
+    }
 
-.linkedin-line {
-  margin: 14px 0 22px;
-  font-size: 0.95rem;
-}
+    .header h1 {
+      font-family: var(--font-display);
+      font-size: 1.9rem;
+      font-weight: 600;
+      margin: 0 0 4px;
+      letter-spacing: -0.01em;
+    }
 
-.status-chip {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--ink-soft);
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-  padding: 4px 10px;
-  margin-bottom: 36px;
-}
+    .header .role {
+      font-size: 1.02rem;
+      color: var(--ink-soft);
+      max-width: 42ch;
+    }
 
-/* ---------- section chrome ---------- */
+    .linkedin-line {
+      margin: 14px 0 22px;
+      font-size: 0.95rem;
+    }
 
-h2.section-title {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  color: var(--ink-soft);
-  text-transform: none;
-  margin: 0 0 18px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--rule);
-}
+    .status-chip {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      padding: 4px 10px;
+      margin-bottom: 36px;
+    }
 
-section { margin-bottom: 48px; }
+    /* ---------- section chrome ---------- */
 
-.about p {
-  font-size: 1.03rem;
-  max-width: 62ch;
-}
+    h2.section-title {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      color: var(--ink-soft);
+      text-transform: none;
+      margin: 0 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--rule);
+    }
 
-/* ---------- case files (projects) ---------- */
+    section { margin-bottom: 48px; }
 
-.case {
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  background: var(--paper-raised);
-  padding: 22px 24px;
-  margin-bottom: 18px;
-}
+    .about p {
+      font-size: 1.03rem;
+      max-width: 62ch;
+    }
 
-.case h3 {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  margin: 0 0 4px;
-}
+    /* ---------- case files (projects) ---------- */
 
-.case .stack {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--ink-soft);
-  margin-bottom: 14px;
-}
+    .case {
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      background: var(--paper-raised);
+      padding: 22px 24px;
+      margin-bottom: 18px;
+    }
 
-.case dl { margin: 0; }
+    .case h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      margin: 0 0 4px;
+    }
 
-.case dt {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--teal);
-  margin-top: 12px;
-}
+    .case .stack {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      margin-bottom: 14px;
+    }
 
-.case dt.flag { color: var(--flag); }
+    .case dl { margin: 0; }
 
-.case dd {
-  margin: 4px 0 0;
-  font-size: 0.96rem;
-}
+    .case dt {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--teal);
+      margin-top: 12px;
+    }
 
-.case .case-link {
-  display: inline-block;
-  margin-top: 16px;
-  font-size: 0.92rem;
-  font-weight: 500;
-}
+    .case dt.flag { color: var(--flag); }
 
-/* ---------- history / background ---------- */
+    .case dd {
+      margin: 4px 0 0;
+      font-size: 0.96rem;
+    }
 
-.history-item {
-  margin-bottom: 26px;
-}
+    .case .case-link {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
 
-.history-item h3 {
-  font-size: 1.05rem;
-  margin: 0 0 2px;
-  font-weight: 600;
-}
+    /* ---------- history / background ---------- */
 
-.history-item .sub {
-  color: var(--ink-soft);
-  font-size: 0.92rem;
-  margin-bottom: 8px;
-}
+    .history-item {
+      margin-bottom: 26px;
+    }
 
-.history-item p { font-size: 0.96rem; max-width: 60ch; margin: 8px 0; }
+    .history-item h3 {
+      font-size: 1.05rem;
+      margin: 0 0 2px;
+      font-weight: 600;
+    }
 
-.upwork-stats {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--ink-soft);
-  margin-top: 6px;
-}
+    .history-item .sub {
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+    }
 
-/* ---------- skills ---------- */
+    .history-item p { font-size: 0.96rem; max-width: 60ch; margin: 8px 0; }
 
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
+    .upwork-stats {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      margin-top: 6px;
+    }
 
-.skill-tag {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-  padding: 6px 12px;
-  background: var(--paper-raised);
-}
+    /* ---------- skills ---------- */
 
-/* ---------- referral / footer ---------- */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-.referral p {
-  font-size: 1.02rem;
-  max-width: 55ch;
-}
+    .skill-tag {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      padding: 6px 12px;
+      background: var(--paper-raised);
+    }
 
-.footer-links {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 18px 0 24px;
-}
+    /* ---------- referral / footer ---------- */
 
-.footer-links a {
-  font-weight: 600;
-}
+    .referral p {
+      font-size: 1.02rem;
+      max-width: 55ch;
+    }
 
-.contact-line {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--ink-soft);
-  border-top: 1px solid var(--rule);
-  padding-top: 18px;
-}
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 18px 0 24px;
+    }
 
-@media (max-width: 520px) {
-  .header { flex-direction: column; align-items: flex-start; }
-}
-</style>
+    .footer-links a {
+      font-weight: 600;
+    }
+
+    .contact-line {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+    }
+
+    @media (max-width: 520px) {
+      .header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
+<body>
+  <main class="wrap">
+    <!-- Your header/content goes here. Example skeleton: -->
+    <header class="header">
+      <img src="assets/profile.jpg" alt="Profile photo">
+      <div>
+        <h1>Toyin Onwunaru</h1>
+        <div class="role">Clinical AI Evaluation — Penultimate-year medical student</div>
+      </div>
+    </header>
+
+    <!-- The rest of your markup (about, projects, history, footer) should follow. -->
+  </main>
+</body>
+</html>
